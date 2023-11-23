@@ -23,9 +23,10 @@
         });
     }
     document.addEventListener("keydown", function(evento){
-    document.querySelector("#key").value = key;
-    const audio = audioMap[key];
-    if(audio){
+        const key = evento.key.toLowerCase
+     document.querySelector("#key").value = key;
+     const audio = audioMap[key];
+     if(audio){
         playAudio(audio)
         const pad = Array.from(pads).find(pad => pad.innerHTML.toLowerCase() === key)
     }
